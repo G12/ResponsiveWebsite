@@ -1,0 +1,354 @@
+/**************************************************
+Fonts
+Droid Serif
+Droid Sans
+Droid Sans Mono
+
+Font Scaling
+6.854rem
+4.236rem
+2.618rem
+1.618rem
+1.0rem
+0.618rem
+
+Colour scheme
+
+**************************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    /*font-family: 'Droid Sans', 'more font stack stuff', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    color: gray;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
+/****************************** 
+DEFAULTS - MOBILE FIRST - SMALL
+*******************************/
+
+h1 {
+    font: bold 2.8rem 'Kadwa', serif;
+    color: black;
+}
+
+h2 {
+    font: bold 2rem 'Kadwa', 'more font stack stuff', serif;
+    color: black;
+}
+
+li,
+p,
+a {
+    font: bold 1rem 'Open Sans', 'more font stack stuff', sans-serif;
+    color: grey;
+}
+
+pre,
+code,
+kbd {
+    font: normal 1.0rem 'Open Sans', 'more font stack stuff', sans-serif;
+}
+
+
+/*******************************
+    LAYOUT - MOBILE FIRST SMALL
+********************************/
+
+
+/*
+wrapper - 95%
+header - 100% of wrapper
+nav - 100% of wrapper
+links - 100% of nav
+main - 100% of wrapper
+columns - 100% of main
+column image - 100% of column
+footer - 100% of wrapper
+*/
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    background-image: url(../images/lol_a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+}
+
+header h1 {
+    padding: 5%;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    line-height: 1.2;
+}
+
+nav {
+    width: 100%;
+}
+
+nav>ul {
+    width: 100%;
+    border: 2px solid grey;
+    margin: .8em 0em 0em;
+}
+
+nav li {
+    width: 100%;
+    list-style: none;
+    border-bottom: 2px solid grey;
+}
+
+nav li:nth-child(5n) {
+    border-bottom: none;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+    display: block;
+    font: bold 1.2rem 'Open Sans', 'more font stack stuff', sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:active,
+nav a:focus,
+nav a:hover {
+    background-color: lightgrey;
+}
+
+main {
+    width: 100%;
+}
+
+.col {
+    float: none;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+footer {
+    width: 100%;
+    border-top: 3px solid grey;
+    margin: 0 auto;
+}
+
+footer li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 1rem 0 0;
+}
+
+
+/******************************
+    LAYOUT - TABLET - MEDIUM
+*******************************/
+
+@media screen and (min-width:600px) {
+    /* font sizes */
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    li,
+    p,
+    a {
+        font-size: 1rem;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    .col img {
+        padding: 1rem 1rem 1rem 0;
+    }
+    /* Columns and Navigation
+    wrapper - 100%
+    header - 100%
+    nav - 90%
+    links - 20% of nav
+    main - 90%
+    columns - 50% of main
+    column image - 60% of column
+    footer - 90%
+    */
+    .wrapper {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    nav {
+        width: 90%;
+        margin: 0 auto;
+    }
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+    footer {
+        width: 90%;
+    }
+    .col {
+        float: left;
+        width: calc(50% - .5em);
+        margin: 0 1em 0 0;
+    }
+    .col:nth-child(2n) {
+        margin: 0;
+    }
+    nav ul {
+        border: none;
+    }
+    nav li {
+        display: block;
+        float: left;
+        width: 20%;
+        list-style: none;
+        border: none;
+    }
+    .col img {
+        width: 60%;
+        float: left;
+    }
+}
+
+
+/******************************
+    LAYOUT - DESKTOP - LARGE
+*******************************/
+
+@media screen and (min-width: 800px) {
+    /* font sizes */
+    h1 {
+        font-size: 4.236rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    li,
+    p,
+    a {
+        font-size: 1.2rem;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited {
+        font-size: 1.9rem;
+    }
+    /* Columns and Navigation
+    header - 100%
+    nav - 90%
+    links - 20% of nav
+    main - 90%
+    columns - 50% of main
+    column image - 50% of column
+    footer - 100%
+    */
+    header {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        padding-left: 5%
+    }
+    .col img {
+        width: 50%;
+    }
+}
+
+
+/******************************
+    LAYOUT - DESKTOP - EXTRA LARGE
+*******************************/
+
+@media screen and (min-width: 1200px) {
+    /* font sizes */
+    h1 {
+        font-size: 4.236rem;
+    }
+    h2 {
+        font-size: 2.618rem;
+    }
+    li,
+    p,
+    a {
+        font-size: 1.618rem;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited {
+        font-size: 2.618rem;
+    }
+    /* Columns and Navigation
+    header - 100%
+    nav - 30%
+    links - 100% of nav
+    main - 70%
+    columns - 50% of main
+    column image - 55% of column width
+    footer - 100%
+    */
+    header {
+        width: 100%;
+    }
+    nav {
+        width: 30%;
+        float: left;
+    }
+    main {
+        width: 70%;
+        float: left
+    }
+    nav ul {
+        padding: 0 2.8rem 0 3rem;
+    }
+    nav li {
+        display: block;
+        width: 100%;
+        list-style: none;
+        border: none;
+    }
+    header h1 {
+        padding: 3rem;
+    }
+    footer {
+        clear: left;
+        padding-left: 3rem;
+    }
+    .col img {
+        width: 55%;
+    }
+}
