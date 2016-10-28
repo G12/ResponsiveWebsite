@@ -26,7 +26,7 @@ html {
     font-size: 16px;
     line-height: 1.6;
     /*font-family: 'Droid Sans', 'more font stack stuff', sans-serif;*/
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     color: gray;
 }
 
@@ -45,26 +45,30 @@ DEFAULTS - MOBILE FIRST - SMALL
 *******************************/
 
 h1 {
-    font: bold 2.8rem 'Kadwa', serif;
+    font: bold 10vw 'Kadwa', 'Georgia', serif;
     color: black;
 }
 
 h2 {
-    font: bold 2rem 'Kadwa', 'more font stack stuff', serif;
+    font: bold 8vw 'Kadwa', 'Georgia', serif;
     color: black;
 }
 
 li,
 p,
 a {
-    font: bold 1rem 'Open Sans', 'more font stack stuff', sans-serif;
+    font: bold 3vw 'Open Sans', 'Arial', sans-serif;
     color: grey;
+}
+
+a {
+    cursor: pointer;
 }
 
 pre,
 code,
 kbd {
-    font: normal 1.0rem 'Open Sans', 'more font stack stuff', sans-serif;
+    font: normal 1.0rem 'Open Sans', 'Arial', sans-serif;
 }
 
 
@@ -128,15 +132,19 @@ nav a,
 nav a:link,
 nav a:visited {
     display: block;
-    font: bold 1.2rem 'Open Sans', 'more font stack stuff', sans-serif;
+    font: bold 5vw 'Open Sans', 'Arial', sans-serif;
     text-align: center;
     text-decoration: none;
 }
 
 nav a:active,
-nav a:focus,
 nav a:hover {
     background-color: lightgrey;
+}
+
+nav a:focus {
+    color: white;
+    background-color: cadetblue;
 }
 
 main {
@@ -159,6 +167,7 @@ footer {
     width: 100%;
     border-top: 3px solid grey;
     margin: 0 auto;
+    padding-bottom: 1rem;
 }
 
 footer li {
@@ -175,20 +184,20 @@ footer li {
 @media screen and (min-width:600px) {
     /* font sizes */
     h1 {
-        font-size: 4rem;
+        font-size: 7vw
     }
     h2 {
-        font-size: 1.6rem;
+        font-size: 5vw;
     }
     li,
     p,
     a {
-        font-size: 1rem;
+        font-size: 2vw;
     }
     nav a,
     nav a:link,
     nav a:visited {
-        font-size: 1.2rem;
+        font-size: 3vw;
         text-align: left;
     }
     .col img {
@@ -213,6 +222,9 @@ footer li {
     nav {
         width: 90%;
         margin: 0 auto;
+    }
+    nav a:focus {
+        margin-right: 1rem;
     }
     main {
         width: 90%;
@@ -253,20 +265,23 @@ footer li {
 @media screen and (min-width: 800px) {
     /* font sizes */
     h1 {
-        font-size: 4.236rem;
+        font-size: 7vw;
     }
     h2 {
-        font-size: 2.2rem;
+        font-size: 4.5vw;
     }
     li,
     p,
     a {
-        font-size: 1.2rem;
+        font-size: 1.5vw;
     }
     nav a,
     nav a:link,
     nav a:visited {
-        font-size: 1.9rem;
+        font-size: 3vw;
+    }
+    nav a:focus {
+        margin-right: 1rem;
     }
     /* Columns and Navigation
     header - 100%
@@ -297,20 +312,23 @@ footer li {
 @media screen and (min-width: 1200px) {
     /* font sizes */
     h1 {
-        font-size: 4.236rem;
+        font-size: 7vw;
     }
     h2 {
-        font-size: 2.618rem;
+        font-size: 4vw;
     }
     li,
     p,
     a {
-        font-size: 1.618rem;
+        font-size: 1.4vw;
     }
     nav a,
     nav a:link,
     nav a:visited {
-        font-size: 2.618rem;
+        font-size: 3.5vw;
+    }
+    nav a:focus {
+        margin-right: 0;
     }
     /* Columns and Navigation
     header - 100%
